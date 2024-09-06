@@ -23,7 +23,7 @@ app.get('/',(req,res)=>{
 //================================================================
 
 app.get("/home", (req, res) => {
- return res.status(200).send("working");
+ return res.status(200).send("server working");
 });
 
 
