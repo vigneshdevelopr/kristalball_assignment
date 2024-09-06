@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "build": "vercel build"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "mongodb": "^5.1.0",
     "mongoose": "^7.0.1",
     "node-cron": "^3.0.2",
-    "nodemon": "^2.0.21"
+    "nodemon": "^2.0.21",
+    "vercel": "^37.4.0"
   }
 }
