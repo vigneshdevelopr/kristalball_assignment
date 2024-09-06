@@ -6,10 +6,12 @@ import cors from "cors";
 import { loginRouter } from "./Routes/login.js";
 import { signupRouter } from "./Routes/signup.js";
 import { doubtscontent } from "./Routes/doubtscontent.js";
-import { isSignedIn } from "./Auth/auth.js";
+// import { isSignedIn } from "./Auth/auth.js";
 const app = express();
 
 const PORT = process.env.PORT || 3002;
+createConnection();
+
 
 app.use(express.json());
 app.use(cors());
@@ -18,8 +20,7 @@ app.use("/user", loginRouter);
 app.get('/',(req,res)=>{
   return res.status(200).json({message: 'Stackoverflow server working'})
 })
-app.use("/",isSignedIn, doubtscontent);
-createConnection();
+// app.use("/",isSignedIn, doubtscontent);
 
 
 //================================================================
